@@ -1,10 +1,25 @@
-import './App.less';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { AppContainer, theme } from './App.styles';
+import Header from './components/Header/Header';
+import Social from './components/Social/Social';
 
 function App() {
+  const [mode, setMode] = useState<'light' | 'dark'>('light');
+
+  const handleThemeChange = () => {
+    setMode(mode === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <div className="App">
-      <p>Hello world</p>
-    </div>
+    <ThemeProvider theme={theme[mode]}>
+      <AppContainer>
+        <Header currentTheme={mode} toggleTheme={handleThemeChange} />
+        <main>
+          <Social />
+        </main>
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 
