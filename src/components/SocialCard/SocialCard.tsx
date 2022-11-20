@@ -37,7 +37,7 @@ export default function SocialCard({ type, count, color, iconUrl, today, user }:
       <CardCount>{getCount()}</CardCount>
       <CardType>{type}</CardType>
       <CardFooter type={getGain()}>
-        <img src={`./src/assets/icon-${getGain()}.svg`} alt={`${getGain()} arrow`} />
+        <img src={`icon-${getGain()}.svg`} alt={`${getGain()} arrow`} />
         <p>{today >= 0 ? `${today} Today` : `${today * -1} Today`}</p>
       </CardFooter>
     </Card>
