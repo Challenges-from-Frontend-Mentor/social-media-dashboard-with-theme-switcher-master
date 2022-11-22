@@ -8,6 +8,20 @@ const Data = [
     today: 12,
     icon: 'icon-facebook.svg',
     color: 'hsl(208, 92%, 53%)',
+    overview: [
+      {
+        id: 1,
+        type: 'page views',
+        count: 87,
+        today: 3,
+      },
+      {
+        id: 2,
+        type: 'likes',
+        count: 52,
+        today: -2,
+      },
+    ],
   },
   {
     id: 2,
@@ -18,6 +32,20 @@ const Data = [
     today: 99,
     icon: 'icon-twitter.svg',
     color: 'hsl(203, 89%, 53%)',
+    overview: [
+      {
+        id: 1,
+        type: 'retweets',
+        count: 117,
+        today: 303,
+      },
+      {
+        id: 2,
+        type: 'likes',
+        count: 507,
+        today: 553,
+      },
+    ],
   },
   {
     id: 3,
@@ -28,6 +56,20 @@ const Data = [
     today: 1099,
     icon: 'icon-instagram.svg',
     color: 'linear-gradient(135deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
+    overview: [
+      {
+        id: 1,
+        type: 'likes',
+        count: 5462,
+        today: 2257,
+      },
+      {
+        id: 2,
+        type: 'profile views',
+        count: 52000,
+        today: 1375,
+      },
+    ],
   },
   {
     id: 4,
@@ -38,6 +80,20 @@ const Data = [
     today: -144,
     icon: 'icon-youtube.svg',
     color: 'hsl(348, 97%, 39%)',
+    overview: [
+      {
+        id: 1,
+        type: 'likes',
+        count: 107,
+        today: -19,
+      },
+      {
+        id: 2,
+        type: 'total views',
+        count: 1407,
+        today: -12,
+      },
+    ],
   },
 ];
 

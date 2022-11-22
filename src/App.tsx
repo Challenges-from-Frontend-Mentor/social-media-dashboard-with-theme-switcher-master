@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { AppContainer, theme } from './App.styles';
 import Header from './components/Header/Header';
+import Overview from './components/Overview/Overview';
 import Social from './components/Social/Social';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Header currentTheme={mode} toggleTheme={handleThemeChange} />
         <main>
           <Social />
+          <Overview />
         </main>
       </AppContainer>
     </ThemeProvider>
