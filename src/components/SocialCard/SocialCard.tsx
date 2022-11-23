@@ -31,7 +31,7 @@ export default function SocialCard({ type, count, color, iconUrl, today, user }:
     <Card>
       <CardDecorator color={color} />
       <CardHeader>
-        <CardImage src={iconUrl} />
+        <CardImage src={iconUrl} alt={`${type} icon`} />
         <CardTitle>{user}</CardTitle>
       </CardHeader>
       <CardCount>{getCount()}</CardCount>

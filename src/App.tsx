@@ -6,7 +6,7 @@ import Overview from './components/Overview/Overview';
 import Social from './components/Social/Social';
 
 function App() {
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
 
   const handleThemeChange = () => {
     setMode(mode === 'light' ? 'dark' : 'light');

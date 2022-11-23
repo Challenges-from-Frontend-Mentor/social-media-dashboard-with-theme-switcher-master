@@ -19,7 +19,7 @@ export default function OverviewCard({ count, icon, title, todayGrow }: Overview
   return (
     <Card>
       <CardTitle>{title}</CardTitle>
-      <CardIcon src={icon} />
+      <CardIcon src={icon} alt={`${title} icon`} />
       <CardCount>{getCount()}</CardCount>
       <CardTodayGrow type={getGain()}>
         <img src={`icon-${getGain()}.svg`} alt={`${getGain()} arrow`} />
