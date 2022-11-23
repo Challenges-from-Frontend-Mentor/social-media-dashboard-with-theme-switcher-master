@@ -5,6 +5,11 @@ export const HeaderContainer = styled.header`
   flex-direction: column;
   width: 100%;
   padding-bottom: 1.5rem;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const HeaderTitle = styled.h1`
@@ -17,6 +22,10 @@ export const HeaderSubtitle = styled.p`
   font-size: 1.1rem;
   font-weight: 700;
   color: ${(props) => props.theme.textSecondary};
+
+  @media (min-width: 1024px) {
+    grid-column: 1 / 2;
+  }
 `;
 
 export const Separator = styled.div`
@@ -24,6 +33,10 @@ export const Separator = styled.div`
   background-color: ${(props) => props.theme.textSecondary};
   padding: 0.5px;
   margin: 1.5rem 0;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const SwitchContainer = styled.nav`
@@ -31,6 +44,15 @@ export const SwitchContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media (min-width: 1024px) {
+    width: auto;
+    gap: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: flex-end;
+  }
 `;
 
 export const SwitchLabel = styled.label`
@@ -50,6 +72,11 @@ export const SwitchButton = styled.button`
   position: relative;
   transition: all 0.3s ease-in-out;
 
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -64,6 +91,10 @@ export const SwitchButton = styled.button`
 
   &.dark {
     background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 
   &.dark::before {

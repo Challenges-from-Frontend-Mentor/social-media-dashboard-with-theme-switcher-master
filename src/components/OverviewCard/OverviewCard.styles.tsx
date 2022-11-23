@@ -10,6 +10,11 @@ export const Card = styled.div`
   border-radius: 0.5rem;
   padding: 2rem;
   background: ${(props) => props.theme.cardBackground};
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${(props) => props.theme.cardBackgroundHover};
+  }
 `;
 
 export const CardTitle = styled.h2`
@@ -27,6 +32,7 @@ export const CardCount = styled.p`
 
 export const CardIcon = styled(CardImage)`
   justify-self: end;
+  align-self: center;
 `;
 
 export const CardTodayGrow = styled(CardFooter)`

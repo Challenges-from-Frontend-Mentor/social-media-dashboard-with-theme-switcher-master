@@ -8,6 +8,11 @@ export const Card = styled.div`
   background-color: ${(props) => props.theme.cardBackground};
   border-radius: 0.5rem;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${(props) => props.theme.cardBackgroundHover};
+  }
 `;
 
 export const CardDecorator = styled.div<{ color: string }>`
